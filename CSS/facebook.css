@@ -1,0 +1,42 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fb-branding { width: 500px; }
+.logo { color: #1877f2; font-size: 60px; margin-bottom: 0; }
+.fb-branding p { font-size: 24px; line-height: 28px; }
+
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 400px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.btn-blue { background: #1877f2; color: white; width: 100%; border: none; padding: 14px; border-radius: 6px; font-size: 20px; font-weight: bold; cursor: pointer; }
+.btn-green { background: #42b72a; color: white; border: none; padding: 14px 20px; border-radius: 6px; font-size: 17px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.forgot { display: block; margin: 15px; color: #1877f2; text-decoration: none; font-size: 14px; }

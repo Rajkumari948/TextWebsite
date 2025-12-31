@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Clone</title>
+    <link rel="stylesheet" href="../CSS/facebook.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="fb-branding">
+            <h1 class="logo">facebook</h1>
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+
+        <div class="form-container">
+            <div id="register-box" class="box">
+                <h2>Create a new account</h2>
+                <p>It's quick and easy.</p>
+                <hr>
+                <input type="text" id="reg-email" placeholder="Mobile number or email address">
+                <input type="password" id="reg-pass" placeholder="New password">
+                <button onclick="handleRegister()" class="btn-green">Sign Up</button>
+                <p class="footer-link">Already have an account? <a href="#" onclick="showLogin()">Log In</a></p>
+            </div>
+
+            <div id="login-box" class="box" style="display: none;">
+                <input type="text" id="login-email" placeholder="Email address or phone number">
+                <input type="password" id="login-pass" placeholder="Password">
+                <button onclick="handleLogin()" class="btn-blue">Log In</button>
+                <a href="#" class="forgot">Forgotten password?</a>
+                <hr>
+                <button onclick="showRegister()" class="btn-green">Create new account</button>
+            </div>
+        </div>
+    </div>
+    <script src="../JAVASCRIPT/facebook.js"></script>
+</body>
+</html>
