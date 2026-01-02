@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for Facebook</title>
+    <link rel="stylesheet" href="../CSS/facebook.css">
+</head>
+<body style="background-color: #f0f2f5; display: flex; height: 100vh;">
+    <div class="signup-container">
+        <div class="signup-header">
+            <h2>Sign Up</h2>
+            <p>It's quick and easy.</p>
+        </div>
+        <form id="signupForm">
+            <div class="name-fields">
+                <input type="text" placeholder="First name">
+                <span id="nameError" style="color: red; font-size: 12px; display: none;">please enter your first name!</span>
+                <input type="text" placeholder="Surname">
+                <span id="surnameError" style="color: red; font-size: 12px; display: none;">please enter your surname!</span>
+            </div>
+            <input type="text" placeholder="Mobile number or email address" style="width: 100%;">
+            <span id="Error" style="color: red; font-size: 12px; display: none;">please enter your email or phone number!</span>
+            <input type="password" placeholder="New password" style="width: 100%;">
+            <span id="passwordError" style="color: red; font-size: 12px; display: none;">please enter your password!</span>
+            <div class="form-group">
+            <p id="message"></p>
+            </div>
+            <p style="font-size: 12px; color: #777; margin: 10px 0;">
+                By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy.
+            </p>
+            
+            <center><button type="submit" class="login-btn signup-btn">Sign Up</button></center>
+            <center><a href="facebook.html" style="display:block; margin-top:15px; color: #1877f2;">Already have an account?</a></center>
+        </form>
+    </div>
+    <script src="../JAVASCRIPT/facebook.js"></script>
+</body>
+</html>

@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook - Clone</title>
+    <title>facebook account</title>
     <link rel="stylesheet" href="../CSS/facebook.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="fb-branding">
-            <h1 class="logo">facebook</h1>
-            <p>Facebook helps you connect and share with the people in your life.</p>
+    <h1 style="color: rgb(6, 147, 241); text-align: center; font-size: 70px; ">facebook</h1>
+    <p style="text-align: center; font-size: 30px;">Facebook helps you connect and share with the people in your life.</p>
+    <section class="container" bb>
+        <div class="email" id="emailname">
+            <input type="text" id="emailname" name="email" placeholder="Email address or phone number"><br>
         </div>
-
-        <div class="form-container">
-            <div id="register-box" class="box">
-                <h2>Create a new account</h2>
-                <p>It's quick and easy.</p>
-                <hr>
-                <input type="text" id="reg-email" placeholder="Mobile number or email address">
-                <input type="password" id="reg-pass" placeholder="New password">
-                <button onclick="handleRegister()" class="btn-green">Sign Up</button>
-                <p class="footer-link">Already have an account? <a href="#" onclick="showLogin()">Log In</a></p>
-            </div>
-
-            <div id="login-box" class="box" style="display: none;">
-                <input type="text" id="login-email" placeholder="Email address or phone number">
-                <input type="password" id="login-pass" placeholder="Password">
-                <button onclick="handleLogin()" class="btn-blue">Log In</button>
-                <a href="#" class="forgot">Forgotten password?</a>
-                <hr>
-                <button onclick="showRegister()" class="btn-green">Create new account</button>
-            </div>
+        <div class="password" id="passwordname">
+            <input type="text" id="passwordname" name="password" placeholder="password">
         </div>
-    </div>
-    <script src="../JAVASCRIPT/facebook.js"></script>
+        <div class="iogin" id="login">
+            <button class="login" id="login">Log in</button>
+
+            <br><a href="#" >Forgotten password?</a>
+        </div>
+         <div class="form-group">
+            <p id="message"></p>
+        </div>
+        <div class="accountt" id="createaccount">
+            <a href="signup.html" style="text-decoration: none;">
+              <button type="button" class="create-btn">Create New Account</button>
+           </a>
+        </div>
+        
+         <p class="celeb-link"><b>Create a Page</b> for a celebrity, brand or business.</p>
+        
+        
+
+        <script src="../JAVASCRIPT/facebook.js"></script>
+    </section>
 </body>
 </html>

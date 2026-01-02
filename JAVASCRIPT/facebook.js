@@ -1,39 +1,82 @@
-// Data ko browser ki memory (LocalStorage) mein save karne ke liye
-function handleRegister() {
-    const email = document.getElementById('reg-email').value;
-    const pass = document.getElementById('reg-pass').value;
+const emailInput = document.getElementById('emailname').getElementsByTagName('input')[0];
+const passwordInput = document.getElementById('passwordname').getElementsByTagName('input')[0];
+const loginButton = document.getElementById('login').getElementsByTagName('button')[0];
+const createAccountButton = document.getElementById('createaccount').getElementsByTagName('button')[0];
+const messageDisplay = document.getElementById('message');
+// Login button click function
+loginButton.onclick = function() {
+    const emailValue = emailInput.value;
+    const passwordValue = passwordInput.value;
 
-    if(email && pass) {
-        localStorage.setItem('userEmail', email);
-        localStorage.setItem('userPass', pass);
-        alert("Registration Successful! Now please Login.");
-        showLogin(); // Register hote hi login page dikhao
-    } else {
-        alert("Please fill all details");
+    if(emailValue===""){
+        messageDisplay.textContent="please enter your email or phone number";
+        messageDisplay.style.color="red";
+    }
+    else if(passwordValue===""){
+        messageDisplay.textContent="please enter your password";
+        messageDisplay.style.color="red";
+    }
+    else{
+        messageDisplay.textContent="logged in successfully";
+        messageDisplay.style.color="green";
     }
 }
 
-function handleLogin() {
-    const email = document.getElementById('login-email').value;
-    const pass = document.getElementById('login-pass').value;
 
-    const savedEmail = localStorage.getItem('userEmail');
-    const savedPass = localStorage.getItem('userPass');
+// Create Account button click function
+createAccountButton.onclick = function() {
+    alert("Create a new account.");
+};
 
-    if(email === savedEmail && pass === savedPass) {
-        alert("Welcome to Facebook!");
-        window.location.href = "csharp.html"; // Login successful hone par aapke main page par bhej dega
-    } else {
-        alert("Invalid Email or Password!");
-    }
-}
+// create account button
+const createBtn = document.querySelector('.create-btn');
 
-function showLogin() {
-    document.getElementById('register-box').style.display = 'none';
-    document.getElementById('login-box').style.display = 'block';
-}
+createBtn.addEventListener('click', function() {
+    // location
+    window.location.href = "../HTML/signup.html"; 
+});
 
-function showRegister() {
-    document.getElementById('login-box').style.display = 'none';
-    document.getElementById('register-box').style.display = 'block';
+// Signup form
+const signupForm = document.getElementById('signupForm');
+
+if (signupForm) {
+    signupForm.addEventListener('submit', function (e) {
+        e.preventDefault(); 
+
+        // Inputs 
+        const fname = document.getElementById('fname');
+        const sname = document.getElementById('sname');
+        const email = document.getElementById('mobileEmail');
+
+        // Error spans 
+        const nameError = document.getElementById('nameError');
+        const surnameError = document.getElementById('surnameError');
+        const emailError = document.getElementById('emailError');
+
+        let isValid = true;
+
+        // First Name Validation
+        if (fname.value.trim() === "") {
+            fname.style.border = "1px solid red";
+            nameError.style.display = "none";
+            isValid = false;
+        } else {
+            fname.style.border = "1px solid #dddfe2";
+            nameError.style.display = "none";
+        }
+
+        // Surname Validation
+        if (sname.value.trim() === "") {
+            sname.style.border = "1px solid red";
+            surnameError.style.display = "block";
+            isValid = false;
+        } else {
+            sname.style.border = "1px solid #dddfe2";
+            surnameError.style.display = "none";
+        }
+
+        if (isValid) {
+            alert("Form submitted successfully!");
+        }
+    });
 }
