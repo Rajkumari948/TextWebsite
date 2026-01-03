@@ -1,82 +1,93 @@
-const emailInput = document.getElementById('emailname').getElementsByTagName('input')[0];
-const passwordInput = document.getElementById('passwordname').getElementsByTagName('input')[0];
-const loginButton = document.getElementById('login').getElementsByTagName('button')[0];
-const createAccountButton = document.getElementById('createaccount').getElementsByTagName('button')[0];
-const messageDisplay = document.getElementById('message');
-// Login button click function
-loginButton.onclick = function() {
-    const emailValue = emailInput.value;
-    const passwordValue = passwordInput.value;
+document.addEventListener("DOMContentLoaded", () => {
+    const loginBtn = document.querySelector(".login-box button"); // Log in button
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const message = document.getElementById("message");
 
-    if(emailValue===""){
-        messageDisplay.textContent="please enter your email or phone number";
-        messageDisplay.style.color="red";
-    }
-    else if(passwordValue===""){
-        messageDisplay.textContent="please enter your password";
-        messageDisplay.style.color="red";
-    }
-    else{
-        messageDisplay.textContent="logged in successfully";
-        messageDisplay.style.color="green";
-    }
-}
+    loginBtn.addEventListener("click", () => {
+        const email = emailInput.value;
+        const password = passwordInput.value;
 
-
-// Create Account button click function
-createAccountButton.onclick = function() {
-    alert("Create a new account.");
-};
-
-// create account button
-const createBtn = document.querySelector('.create-btn');
-
-createBtn.addEventListener('click', function() {
-    // location
-    window.location.href = "../HTML/signup.html"; 
-});
-
-// Signup form
-const signupForm = document.getElementById('signupForm');
-
-if (signupForm) {
-    signupForm.addEventListener('submit', function (e) {
-        e.preventDefault(); 
-
-        // Inputs 
-        const fname = document.getElementById('fname');
-        const sname = document.getElementById('sname');
-        const email = document.getElementById('mobileEmail');
-
-        // Error spans 
-        const nameError = document.getElementById('nameError');
-        const surnameError = document.getElementById('surnameError');
-        const emailError = document.getElementById('emailError');
-
-        let isValid = true;
-
-        // First Name Validation
-        if (fname.value.trim() === "") {
-            fname.style.border = "1px solid red";
-            nameError.style.display = "none";
-            isValid = false;
+        if (email === "" || password === "") {
+            message.style.color = "red";
+            message.innerText = "Please enter both Email and Password";
         } else {
-            fname.style.border = "1px solid #dddfe2";
-            nameError.style.display = "none";
-        }
+            if (email === "pk6635886@gmail.com" && password === "gunjan") {
+                message.style.color = "green";
+                message.innerText = "Login successful";
 
-        // Surname Validation
-        if (sname.value.trim() === "") {
-            sname.style.border = "1px solid red";
-            surnameError.style.display = "block";
-            isValid = false;
-        } else {
-            sname.style.border = "1px solid #dddfe2";
-            surnameError.style.display = "none";
-        }
+                localStorage.setItem("userEmail", email);
 
-        if (isValid) {
-            alert("Form submitted successfully!");
+                setTimeout(() => {
+                    window.location.href = "../HTML/facebook.html";
+                }, 1500);
+            } else {
+                message.style.color = "red";
+                message.innerText = "Invalid Email or Password";
+            }
         }
     });
-}
+
+    passwordInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            loginBtn.click();
+        }
+    });
+
+    const savedEmail = localStorage.getItem("userEmail");
+    if (savedEmail) {
+        emailInput.value = savedEmail;
+    }
+});
+
+ document.addEventListener("DOMContentLoaded", () => {
+    const signupbtn = document.getElementById("signupbtn");
+    const message = document.getElementById("message");
+
+    signupbtn.addEventListener("click", (event) => {
+        event.preventDefault(); // Page reload rokne ke liye
+
+        // Inputs ki values nikaalna
+        const fname = document.getElementById("fname").value.trim();
+        const lname = document.getElementById("lname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+       // Radio buttons se selected gender nikaalne ka sahi tarika
+        const gender = document.querySelector('input[name="gender"]:checked');
+
+        // Validation Logic
+        if (fname === "" || lname === "") {
+            message.innerText = "Please Enter your name";
+            message.style.color = "red";
+        } 
+        else if (email === "") {
+            message.innerText = "Please Enter your email or mobile number.";
+            message.style.color = "red";
+        } 
+        else if (!gender) {
+            message.innerText = "please select your gender.";
+            message.style.color = "red";
+        } 
+        else if (password.length < 6) {
+            message.innerText = "Password must be at least 6 characters.";
+            message.style.color = "red";
+        } 
+        else {
+          if(email=== "pk6635886@gmail.com" && password=== "gunjan"){
+            message.innerText = "Your account has been created successfully!";
+            message.style.color = "green";
+
+            localStorage.setItem("useremail", email);
+            localStorage.setItem("userpass", password);
+            // Data save karke login page pe bhej sakte hain
+            setTimeout(() => {
+                window.location.href = "../HTML/facebook.html"; 
+            }, 2000);
+          }
+        else {
+                message.innerText = "Email or Password does not match our records.";
+                message.style.color = "red";
+            }  
+        }
+    });
+});

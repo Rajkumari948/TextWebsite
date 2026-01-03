@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>facebook account</title>
-    <link rel="stylesheet" href="../CSS/facebook.css">
-</head>
-<body>
-    <h1 style="color: rgb(6, 147, 241); text-align: center; font-size: 70px; ">facebook</h1>
-    <p style="text-align: center; font-size: 30px;">Facebook helps you connect and share with the people in your life.</p>
-    <section class="container" bb>
-        <div class="email" id="emailname">
-            <input type="text" id="emailname" name="email" placeholder="Email address or phone number"><br>
-        </div>
-        <div class="password" id="passwordname">
-            <input type="text" id="passwordname" name="password" placeholder="password">
-        </div>
-        <div class="iogin" id="login">
-            <button class="login" id="login">Log in</button>
+    <head>
+        <meta charset="UTF-8">
+        <title>Facebook - logo in or sign up</title>
+        <link rel="stylesheet" href="../CSS/facebook.css">
+        
+    </head>
+   
+    <body>
+        <div class="container">
+            <h1 class="logo">facebook</h1>
+            <p class="tagline">Facebook helps you connect and share with the People in your life.</p>
 
-            <br><a href="#" >Forgotten password?</a>
+            <div class="login-box">
+                <input type="text" id="email" placeholder="Email or Phone number">
+                <input type="password" id="password" placeholder="Password">
+                
+                <button onclick="login()">Log in</button>
+               
+                <a href="#" class="forgot">forgotten password?</a>  
+
+                <div class="account">
+                    <a href="../HTML/signup.html">
+                    <button class="Create">Create new account</button>
+                    </a>
+                </div> 
+                
+                <div class="form-group">
+                   <p id="message"></p>
+                </div>
+
+                 
+            </div>
         </div>
-         <div class="form-group">
-            <p id="message"></p>
-        </div>
-        <div class="accountt" id="createaccount">
-            <a href="signup.html" style="text-decoration: none;">
-              <button type="button" class="create-btn">Create New Account</button>
-           </a>
-        </div>
-        
-         <p class="celeb-link"><b>Create a Page</b> for a celebrity, brand or business.</p>
-        
-        
 
         <script src="../JAVASCRIPT/facebook.js"></script>
-    </section>
-</body>
+    </body>
 </html>
