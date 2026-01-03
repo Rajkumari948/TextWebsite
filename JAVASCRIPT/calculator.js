@@ -1,6 +1,31 @@
-function calculate() {
-  let num1 = parseFloat(document.getElementById('num1').value);
-  let num2 = parseFloat(document.getElementById('num2').value);
-  let result = num1 + num2;
-  document.getElementById('result').value = isNaN(result) ? 'Invalid input' : result;
-}
+
+const display = document.getElementById('result');
+
+
+const appendToDisplay = (value) => {
+    if (display.value === "Error") {
+        display.value = "";
+    }
+    display.value += value;
+};
+
+
+const clearScreen = () => {
+    display.value = "";
+};
+
+
+const deleteLast = () => {
+    display.value = display.value.slice(0, -1);
+};
+
+
+const calculate = () => {
+    try {
+        if (display.value !== "") {
+            display.value = eval(display.value);
+        }
+    } catch (error) {
+        display.value = "Error";
+    }
+};
