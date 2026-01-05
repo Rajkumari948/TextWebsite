@@ -45,17 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = document.getElementById("message");
 
     signupbtn.addEventListener("click", (event) => {
-        event.preventDefault(); // Page reload rokne ke liye
+        event.preventDefault(); 
 
-        // Inputs ki values nikaalna
+        
         const fname = document.getElementById("fname").value.trim();
         const lname = document.getElementById("lname").value.trim();
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
-       // Radio buttons se selected gender nikaalne ka sahi tarika
+       
         const gender = document.querySelector('input[name="gender"]:checked');
 
-        // Validation Logic
+    
         if (fname === "" || lname === "") {
             message.innerText = "Please Enter your name";
             message.style.color = "red";
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             localStorage.setItem("useremail", email);
             localStorage.setItem("userpass", password);
-            // Data save karke login page pe bhej sakte hain
+    
             setTimeout(() => {
                 window.location.href = "../HTML/facebook.html"; 
             }, 2000);
