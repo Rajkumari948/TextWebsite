@@ -105,12 +105,14 @@ body {
 .card-header h2 {
      margin: 0;
       font-size: 25px; 
+    text-align: center;
     }
 
 .card-header p { 
     color: #606770;
      margin: 5px 0;
       font-size: 15px;
+    text-align: center;
      }
 
 hr {
