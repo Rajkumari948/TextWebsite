@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.resume-container {
+    background: #fff;
+    width: 100%;
+    max-width: 850px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #7f8c8d;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #34495e;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    border-left: 4px solid #2c3e50;
+    padding-left: 10px;
+    margin: 20px 0 10px 0;
+    text-transform: uppercase;
+}
+
+.sub-text {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+ul {
+    margin-left: 20px;
+    color: #34495e;
+    font-size: 0.95rem;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.skills-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.skills-list li {
+    background: #ecf0f1;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.job, .edu {
+    margin-bottom: 15px;
+}
+
+h4 {
+    color: #34495e;
+}

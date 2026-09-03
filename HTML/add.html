@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="../CSS/studentmanagement.css">
+</head>
+<body>
+    <h1>Add Student Record</h1>
+    <div class="container">
+        <div class="input-row">Student Name: <input type="text" id="name" placeholder="Ram"></div>
+        <div class="input-row">DOB: <input type="date" id="dob"></div>
+        <div class="input-row">Gender: 
+            <select id="gender"><option>Select</option><option>Male</option><option>Female</option></select>
+        </div>
+        <div class="input-row">Course: 
+            <select id="course"><option>Select</option><option>BCA</option><option>BA</option><option>B.Tech</option></select>
+        </div>
+        <div class="btn-group">
+            <button onclick="addStudent()">Add</button>
+            <button onclick="location.href='studentmanagement.html'">Go back</button>
+        </div>
+    </div>
+    <script src="../JAVASCRIPT/studentmanagement.js"></script>
+</body>
+</html>

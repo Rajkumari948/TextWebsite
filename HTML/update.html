@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+    <link rel="stylesheet" href="../CSS/studentmanagement.css">
+</head>
+<body>
+    <h1>Update Student Record</h1>
+    <div class="container">
+        <div class="input-row">Student Name: <input type="text" id="uName"></div>
+        <div class="btn-group">
+            <button onclick="load()">Find</button>
+            <button onclick="location.href='studentmanagement.html'">Go back</button>
+        </div>
+    </div>
+
+    <div id="editBox" class="container" style="display:none; margin-top:20px;">
+        <h3>Edit Details</h3>
+        <div class="input-row">New DOB: <input type="date" id="newDob"></div>
+        <div class="input-row">New Course: <input type="text" id="newCourse"></div>
+        <div class="btn-group">
+            <button onclick="save()">Save Update</button>
+        </div>
+    </div>
+    <script src="../JAVASCRIPT/studentmanagement.js"></script>
+</body>
+</html>

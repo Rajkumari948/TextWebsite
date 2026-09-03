@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: #3b5376;
+  padding: 30px 15px;
+}
+
+/* Header alignment */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Circular Profile Picture styling */
+.profile-img {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #333;
+}
+.resume-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #2563eb;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.contact-info {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #131516;
+}
+
+.linkedin-link {
+  color: #0077b5; /* LinkedIn Blue color */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.linkedin-link:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  border: 0;
+  height: 2px;
+  background: #111213;
+  margin: 20px 0;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  color: #0f172a;
+  border-left: 4px solid #2563eb;
+  padding-left: 10px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.text-content {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.company-name {
+  font-size: 0.85rem;
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.custom-list {
+  padding-left: 18px;
+  font-size: 0.88rem;
+  color: #272d35;
+  line-height: 1.5;
+}
+
+/* Table Styling for Qualifications */
+.edu-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.edu-table th, .edu-table td {
+  border: 1px solid #cbd5e1;
+  padding: 10px;
+  text-align: left;
+}
+
+.edu-table th {
+  background-color: #f8fafc;
+  color: #0d63ed;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.skill-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.skill-card strong {
+  font-size: 0.88rem;
+  color: #0f172a;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.skill-card p {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.personal-details p {
+  font-size: 0.88rem;
+  margin-bottom: 6px;
+  color: #475569;
+}
+
+/* Print Responsive (A4 Page Size Setup) */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  .resume-box {
+    box-shadow: none;
+    padding: 20px;
+    max-width: 100%;
+  }
+}

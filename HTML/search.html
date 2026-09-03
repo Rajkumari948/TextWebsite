@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Student</title>
+    <link rel="stylesheet" href="../CSS/studentmanagement.css">
+</head>
+<body>
+    <h1>Search Student Record</h1>
+    <div class="container">
+        <div class="input-row">Student Name: <input type="text" id="sName" placeholder="Enter name"></div>
+        <div class="btn-group">
+            <button onclick="searchStudent()">Search</button>
+            <button onclick="location.href='studentmanagement.html'">Go back</button>
+        </div>
+    </div>
+    <table border="1" style="width: 80%; margin-top: 20px; border-collapse: collapse;">
+        <thead style="background-color: #cdf1fb;">
+            <tr><th>Student Name</th><th>DOB</th><th>Gender</th><th>Course</th></tr>
+        </thead>
+        <tbody id="out" style="background-color: #e7e7db; text-align: center;"></tbody>
+    </table>
+    <script src="../JAVASCRIPT/studentmanagement.js"></script>
+</body>
+</html>

@@ -110,8 +110,9 @@ body {
 
 .card-header p { 
     color: #606770;
-     margin: 5px 0;
-      font-size: 15px;
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: bold;
     text-align: center;
      }
 

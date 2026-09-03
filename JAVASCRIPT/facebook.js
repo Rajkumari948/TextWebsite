@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             message.style.color = "red";
             message.innerText = "Please enter both Email and Password";
         } else {
-            if (email === "pk6635886@gmail.com" && password === "gunjan") {
+            if (email === "pk6635886@gmail.com",'8298542910' && password === "gunjan") {
                 message.style.color = "green";
                 message.innerText = "Login successful";
 
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+    //facebook signup
  document.addEventListener("DOMContentLoaded", () => {
     const signupbtn = document.getElementById("signupbtn");
     const message = document.getElementById("message");
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
             message.style.color = "red";
         } 
         else {
-          if(email=== "pk6635886@gmail.com" && password=== "gunjan"){
+          if(email=== "pk6635886@gmail.com", '8298542910' && password=== "gunjan"){
             message.innerText = "Your account has been created successfully!";
             message.style.color = "green";
 
